@@ -1,24 +1,25 @@
-// enum
-
-enum Status {pending,approved,rejectet}
+// Enum แบบธรรมดา
+enum Status { pending, approved, rejected }
 
 void main() {
   Status currentStatus = Status.approved;
 
-  if(currentStatus == Status.approved) {
+  if (currentStatus == Status.approved) {
     print("ok");
-  } else{
+  } else {
     print("on");
   }
+
+  // ทดลอง enum แบบมี constructor และ field
+  print("Dog in Thai is: ${Animal.dog.thaiName}");
 }
 
-enum Animal {dog("1"),cat("2"),rat("3");
+// Enum แบบมีค่าพารามิเตอร์
+enum Animal {
+  dog("หมา"),
+  cat("แมว"),
+  rat("หนู");
 
-final String thaiName;
-const Animal(this.thaiName);
-}
-
-void main(){
-
-  print(Animal.dog.thaiName)
+  final String thaiName;
+  const Animal(this.thaiName);
 }

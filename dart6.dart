@@ -1,12 +1,10 @@
-// Class and Objects
+void main() {
+  Person person = Person();
+  print(person.getName());   // ต้องใช้ method เพื่อเข้าถึงค่าภายใน
+}
 
-void main(){
+class Person {
+  String _name = "Unknown";    // private field
 
-  Person person =Person();
-
-  print(person._name);
-
-  class Person {
-    String name="Unknown";
-  }
+  String getName() => _name;  // public getter method
 }
